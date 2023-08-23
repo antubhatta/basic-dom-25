@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary Event</title>
+</head>
+<body>
+    <h1>Sumarry the event handeler</h1>
+    <h3 id="bangla-button">My country name is bangladesh</h3>
+    <p id="para-desc">Default input type</p>
+    <input id="texts-type" type="text">
+    <button id="update-btn">Update</button>
+    <button onclick="onClicks()">Handle event by on click function</button>
+    <button id="make-button">Create a second button</button>
+
+    <script>
+        function onClicks(){
+           const dataClick = document.getElementById('bangla-button')
+           dataClick.innerText='My name is antu'
+      
+    
+        }
+
+        document.getElementById('make-button').addEventListener('click', function() {
+            const banglaButton = document.getElementById('bangla-button');
+            banglaButton.innerText = 'My Name is Antu Bhatta2f';
+        });
+        document.getElementById('update-btn').addEventListener('click',function(){
+          const inputField = document.getElementById('texts-type')
+          const inputText = inputField.value;
+
+          const p =document.getElementById('para-desc')
+          p.innerText = inputText;
+          inputField.value='';
+
+        })
+    </script>
+</body>
+</html>
